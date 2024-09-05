@@ -1,0 +1,224 @@
+body {
+    /* font-family: Karla */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0,
+}
+
+.root-class {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(148, 38%, 91%);
+    height: 100vh;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    /* width: 100%; */
+    padding: auto;
+
+}
+form {
+    padding: 30px;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    justify-items: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+     
+     gap:7px;
+}
+.input-block {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.form-group {
+    width: 100%;
+    display: flex;
+    flex:1;
+    justify-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.single-radio {
+    display: flex;
+    justify-content: center;
+    flex:1;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    /* gap:7px;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+.x{
+    display: flex;
+    gap:7px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007965;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #005f4a;
+}
+
+.txt-msg {
+    resize: none;
+    /* max-lines: 4; */
+}
+.error {
+    border: 1px solid red !important;
+}
+.error-message {
+    margin-top: 1px;
+    color: red;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: lighter;
+    visibility: hidden;
+}
+.queryType {
+    margin: 0;
+}
+.radio-label {
+    margin: 0 !important;
+}
+
+
+
+.popup {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+}
+
+
+
+
+
+
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    top: 30px; /* 30px from the top */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2px;
+    border-radius: 7px;
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    /* -webkit-animation: fadein 0.5s,; */
+    /* animation: fadein 0.5s; */
+  }
+  
+  .chunk {
+    display: flex;
+    justify-content: center;
+    gap:2px;
+    align-items: center;
+  }
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+/*   
+  @-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  } */
+
+  @media (max-width:440px) {
+    .block {
+        display: flex;
+        flex-direction: column;
+    }
+    .x {
+        display: flex;
+        flex-direction: column;
+    }
+    .single-radio {
+        width: 100%;
+    }
+  }
